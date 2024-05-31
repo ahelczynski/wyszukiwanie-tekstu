@@ -1,5 +1,4 @@
 package main.java;
-
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
@@ -20,9 +19,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class WyszukiwanieTekstu extends BorderPane {
-    private TextArea resultArea; // Obszar tekstowy do wyświetlania wyników
-    private TextField patternField; // Pole tekstowe do wprowadzania wzorca
-    private File selectedDirectory; // Zmienna przechowująca wybrany katalog
+    private TextArea resultArea;
+    private TextField patternField;
+    private File selectedDirectory;
 
     public WyszukiwanieTekstu() {
         setPadding(new Insets(10));
@@ -35,7 +34,6 @@ public class WyszukiwanieTekstu extends BorderPane {
         setCenter(resultArea);
     }
 
-    // Tworzy panel wejściowy z polami tekstowymi i przyciskami
     private VBox createInputPane() {
         VBox vbox = new VBox(10);
         vbox.setPadding(new Insets(10));
@@ -49,7 +47,6 @@ public class WyszukiwanieTekstu extends BorderPane {
         selectDirectoryButton.setOnAction(e -> selectDirectory());
         searchButton.setOnAction(e -> searchFiles());
 
-        // Dodaj obsługę klawisza Enter w polu tekstowym wzorca
         patternField.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
                 searchFiles();
@@ -62,7 +59,6 @@ public class WyszukiwanieTekstu extends BorderPane {
         return vbox;
     }
 
-    // Otwiera okno dialogowe do wyboru katalogu
     private void selectDirectory() {
         DirectoryChooser directoryChooser = new DirectoryChooser();
         Stage stage = (Stage) getScene().getWindow();
@@ -73,7 +69,6 @@ public class WyszukiwanieTekstu extends BorderPane {
         }
     }
 
-    // Przeszukuje pliki w wybranym katalogu
     private void searchFiles() {
         if (selectedDirectory == null) {
             resultArea.setText("Wskaż katalog");
@@ -95,7 +90,6 @@ public class WyszukiwanieTekstu extends BorderPane {
         resultArea.setText(resultBuilder.toString());
     }
 
-    // Konwertuje wzorzec zawierający * i ? na wyrażenie regularne
     private String convertToRegex(String pattern) {
         StringBuilder regex = new StringBuilder();
 
@@ -116,7 +110,6 @@ public class WyszukiwanieTekstu extends BorderPane {
         return regex.toString();
     }
 
-    // Przeszukuje plik za pomocą wyrażenia regularnego
     private void searchFile(File file, String regexPattern, StringBuilder resultBuilder) {
         Pattern pattern;
         try {
