@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "WyszukiwanieTekstu",
+            "request": "launch",
+            "mainClass": "main.java.WyszukiwanieTekstu",
+            "projectName": "wyszukiwanie-tekstu_7f9131fa"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -16,7 +23,7 @@
             "request": "launch",
             "mainClass": "main.java.Main",
             "projectName": "wyszukiwanie-tekstu_7f9131fa",
-            "vmArgs": "--module-path \"C:/Users/Admin/Desktop/AEH/Programowanie/wyszukiwanie-tekstu/javafx-sdk-22.0.1/lib\" --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path \"C:/Users/Admin/Desktop/AEH/Programowanie/wyszukiwanie-tekstu/javafx-sdk-22.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }

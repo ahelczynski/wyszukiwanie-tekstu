@@ -26,7 +26,7 @@ wyszukiwanie-tekstu to aplikacja JavaFX, która przeszukuje wszystkie pliki o ro
 
 # Użytkowanie
 1. Uruchom aplikację.
-2. Kliknij przycisk "Select Directory" i wybierz katalog do przeszukania.
+2. Kliknij przycisk "Wybierz katalog" i wybierz katalog do przeszukania.
 3. Wprowadź wzorzec wyszukiwania w polu tekstowym "Wprowadź szukany tekst:".
 4. Naciśnij przycisk "Szukaj" lub klawisz Enter, aby rozpocząć wyszukiwanie.
 5. Wyniki wyszukiwania zostaną wyświetlone w obszarze tekstowym po prawej stronie.
